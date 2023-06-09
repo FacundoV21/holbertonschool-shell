@@ -1,2 +1,2 @@
 #!/bin/bash 
-find . -name "*.gif" -type f -exec -printf '%f\n' bash -c 'printf "%s\n" "${@%.*}"' _ {} +| sort
+find . -printf '%f\n' -name "*.gif" -type f -exec  bash -c 'printf "%s\n" "${@%.*}"' _ {} +| sort
